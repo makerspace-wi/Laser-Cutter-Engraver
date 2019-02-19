@@ -7,3 +7,5 @@ Neben unserem 100W CO2-Laser für die gängigsten Aufgaben und unserem 150W DIY 
 Es wurde ein X/Y-Tisch mit 15W Diodenlaser in ein Gehäuse eingebaut - angetrieben durch einen Arduino Uno mit CNC-Shield via [LASER-GBRL][48219cbc].
 
   [48219cbc]: http://lasergrbl.com/de/ "Laser-GBRL"
+  <br>
+  Projektdokumentationen sind im [Doku-Ordner](/Users/dieter/github/Laser-Cutter-Engraver/doc) gesammelt.
