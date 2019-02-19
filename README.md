@@ -8,4 +8,4 @@ Es wurde ein X/Y-Tisch mit 15W Diodenlaser in ein Gehäuse eingebaut - angetrieb
 
   [48219cbc]: http://lasergrbl.com/de/ "Laser-GBRL"
   <br>
-  Projektdokumentationen sind im [Doku-Ordner](https://github.com/makerspacewi/Laser-Cutter-Engraver/doc) gesammelt.
+  Projektdokumentationen sind im [Doku-Ordner](https://github.com/makerspacewi/Laser-Cutter-Engraver/tree/master/doc) gesammelt.
