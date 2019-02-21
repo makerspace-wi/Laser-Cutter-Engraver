@@ -17,5 +17,6 @@ Der Deckelschalter bestromt bei geschlossenem Deckel das Kleinsignal Relais und 
 Eine kleine rote Leuchtdiode zeigt diese Funktion an.
 #### Schaltbild:
 <img src='/doc/Safety & Marker Circuit/Schematic_01.png' width='100%'>
-#### Modulbeschaltung:
+
+#### Beschaltung:
 <img src='/images/2019/02/beschaltung-modul.jpg' width='100%'>
