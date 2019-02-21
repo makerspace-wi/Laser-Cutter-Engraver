@@ -1,0 +1,7 @@
+Concept:
+Small Unit providing Low Rate PWM (Pin 0 (5)) - for 20 minutes if dedicated
+Enable-Port (Pull Up) (Pin 2 (7)) is tied to ground.
+
+To start it again the security switch needs to be toggled
+Laser ON is active HIGH
+If disabled make PWM-Port to High Impedance Port
