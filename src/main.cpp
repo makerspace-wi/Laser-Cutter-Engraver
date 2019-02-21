@@ -2,7 +2,7 @@
 #include <Bounce2.h>
 #include <Timer.h>
 
-#define dc 3  // duty cycle 1% equ. 2.55
+#define dc 1  // shortest duty cycle (1% equ. 2.55)
 #define taster1 4
 #define led 2
 #define lenable 0 // PWM for marker
@@ -32,7 +32,6 @@ void setup() {
    TCCR0B = (TCCR0B & 0b11111000) | <setting>;
  */
         TCCR0B = (TCCR0B & 0b11111000) | 0x02; // set to divide-by-8 prescale
-
 }
 
 void pwm_on()
