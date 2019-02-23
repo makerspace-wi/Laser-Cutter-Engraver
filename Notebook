@@ -1,7 +1,138 @@
-Concept:
-Small Unit providing Low Rate PWM (Pin 0 (5)) - for 20 minutes if dedicated
-Enable-Port (Pull Up) (Pin 2 (7)) is tied to ground.
+/**
+ * ATtiny85 12bit PWM
+ * v. 1.0
+ * Copyright (C) 2017 Robert Ulbricht
+ * https://www.arduinoslovakia.eu
+ *
+ * Based on http://www.technoblogy.com/show?1NGL
+ *          David Johnson-Davies - www.technoblogy.com
+ *          Unknown licence (? CC BY 4.0)
+ *
+ * Core: https://github.com/SpenceKonde/ATTinyCore
+*/
 
-To start it again the security switch needs to be toggled
-Laser ON is active HIGH
-If disabled make PWM-Port to High Impedance Port
+// ATMEL ATTINY85
+//
+//                  +-\/-+
+//      (D 5) PB5  1|    |8  Vcc
+//      (D 3) PB3  2|    |7  PB2 (D 2)
+//      (D 4) PB4  3|    |6  PB1 (D 1) led
+//            GND  4|    |5  PB0 (D 0)
+//                  +----+
+
+volatile int Dac = 0;
+volatile int Cycle = 0;
+
+// Overflow interrupt
+ISR (TIMER1_OVF_vect) {
+  static int remain;
+  if (Cycle == 0)
+    remain = Dac;
+  if (remain >= 256) {
+    OCR1A = 255; // high (Table 12-2)
+    remain = remain - 256;
+  }
+  else {
+    OCR1A = remain;
+    remain = 0;
+  }
+  Cycle = (Cycle + 1) & 0x0F;
+}
+
+void analogWrite12 (int value) {
+  cli();
+  Dac = value;
+  sei();
+}
+
+void setup() {
+  // Top value for high (Table 12-2)
+  OCR1C = 255;
+  // Timer/Counter1 doing PWM on OC1A (PB1)
+  TCCR1 = 1 << PWM1A    // Pulse Width Modulator A Enable
+          | 1 << COM1A0 // OC1x cleared on compare match. Set when TCNT1 = $00
+          | 1 << CS10;  // PWM clock = CK
+  TIMSK |= 1 << TOIE1; // Timer/Counter1 Overflow Interrupt Enable
+  pinMode(1, OUTPUT);
+}
+
+void loop () {
+  for (int i = 0; i < 100; i++) {
+    analogWrite12(i);
+    delay(10);
+  }
+}
+
+
+// Two 12-bit analogue outputs from an ATtiny85 ************************************
+
+volatile int Dac[2];
+volatile uint8_t* Port[] = { &OCR1A, &OCR1B };
+volatile int Cycle = 0;
+
+// Overflow interrupt
+ISR (TIMER1_OVF_vect) {
+  static int rem[2];
+  for (int chan=0; chan<2; chan++) {
+    int remain;
+    if (Cycle == 0) remain = Dac[chan]; else remain = rem[chan];
+    if (remain >= 256) { *Port[chan] = 255; remain = remain - 256; }
+    else { *Port[chan] = remain; remain = 0; }
+    rem[chan] = remain;
+  }
+  Cycle = (Cycle + 1) & 0x0F;
+}
+
+void analogWrite12 (int chan, int value) {
+  cli(); Dac[chan] = value; sei();
+}
+
+void setup() {
+  // Timer/Counter1 doing PWM on OC1A (PB1) and OC1B (PB4)
+  TCCR1 = 1<<PWM1A | 1<<COM1A0 | 1<<CS10;
+  GTCCR = 1<<PWM1B | 1<<COM1B0;
+  TIMSK = TIMSK | 1<<TOIE1;
+  pinMode(1, OUTPUT);
+  pinMode(4, OUTPUT);
+}
+
+void loop () {
+  int value = 0;
+  for (int i=0; i<4; i++) value = value + analogRead(A1);
+  analogWrite12(0, value);
+  value = 0;
+  for (int i=0; i<4; i++) value = value + analogRead(A3);
+  analogWrite12(1, value);
+  delay(100);
+}
+
+// One 10-bit analogue output from an ATtiny85 ************************************
+
+volatile int Dac = 0;
+volatile int Cycle = 0;
+
+// Overflow interrupt
+ISR (TIMER1_OVF_vect) {
+  static int remain;
+  if (Cycle == 0) remain = Dac;
+  if (remain >= 256) { OCR1A = 255; remain = remain - 256; }
+  else { OCR1A = remain; remain = 0; }
+  Cycle = (Cycle + 1) & 0x03;
+}
+
+void analogWrite10 (int value) {
+  cli(); Dac = value; sei();
+}
+
+void setup() {
+  // Timer/Counter1 doing PWM on OC1A (PB1)
+  TCCR1 = 1<<PWM1A | 1<<COM1A0 | 1<<CS10;
+  TIMSK = TIMSK | 1<<TOIE1;
+  pinMode(1, OUTPUT);
+}
+
+void loop () {
+  int value = analogRead(A1);
+  analogWrite10(value);
+  delay(100);
+}

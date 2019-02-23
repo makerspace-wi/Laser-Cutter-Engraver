@@ -6,7 +6,7 @@
 #define taster1 4
 #define led 2
 #define lenable 0 // PWM for marker
-#define minutes 1
+#define minutes 20
 const unsigned long DUR1 = 1000UL*60*minutes;
 // Instantiate a Bounce object
 Bounce debouncer = Bounce();
@@ -30,8 +30,9 @@ void setup() {
    0x05     1024    61.03515625
 
    TCCR0B = (TCCR0B & 0b11111000) | <setting>;
- */
         TCCR0B = (TCCR0B & 0b11111000) | 0x02; // set to divide-by-8 prescale
+ */
+
 }
 
 void pwm_on()
