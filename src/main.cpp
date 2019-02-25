@@ -8,7 +8,6 @@
 #define lenable 0 // PWM for marker
 #define minutes 20
 const unsigned long DUR1 = 1000UL*60*minutes;
-// Instantiate a Bounce object
 
 
 volatile int Dac = 0;
@@ -35,7 +34,7 @@ void analogWrite12 (int value) {
   Dac = value;
   sei();
 }
-
+// Instantiate a Bounce object
 Bounce debouncer = Bounce();
 Timer t;  // Init Timer
 
