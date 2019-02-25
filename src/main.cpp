@@ -9,6 +9,33 @@
 #define minutes 20
 const unsigned long DUR1 = 1000UL*60*minutes;
 // Instantiate a Bounce object
+
+
+volatile int Dac = 0;
+volatile int Cycle = 0;
+
+// Overflow interrupt
+ISR (TIMER1_OVF_vect) {
+  static int remain;
+  if (Cycle == 0)
+    remain = Dac;
+  if (remain >= 256) {
+    OCR1A = 255; // high (Table 12-2)
+    remain = remain - 256;
+  }
+  else {
+    OCR1A = remain;
+    remain = 0;
+  }
+  Cycle = (Cycle + 1) & 0x0F;
+}
+
+void analogWrite12 (int value) {
+  cli();
+  Dac = value;
+  sei();
+}
+
 Bounce debouncer = Bounce();
 Timer t;  // Init Timer
 
@@ -21,29 +48,25 @@ void setup() {
         debouncer.attach(taster1);
         debouncer.interval(20); // interval in ms
 
-/* Changing the PWM frequency
-   Setting  Divisor   Frequency
-   0x01     1        62500
-   0x02   8        7812.5
-   0x03   64       976.5625   <--DEFAULT
-   0x04     256     244.140625
-   0x05     1024    61.03515625
-
-   TCCR0B = (TCCR0B & 0b11111000) | <setting>;
-        TCCR0B = (TCCR0B & 0b11111000) | 0x02; // set to divide-by-8 prescale
- */
-
+        // Top value for high (Table 12-2)
+        OCR1C = 255;
+        // Timer/Counter1 doing PWM on OC1A (PB1)
+        TCCR1 = 1 << PWM1A    // Pulse Width Modulator A Enable
+                | 1 << COM1A0 // OC1x cleared on compare match. Set when TCNT1 = $00
+                | 1 << CS10;  // PWM clock = CK
+        TIMSK |= 1 << TOIE1; // Timer/Counter1 Overflow Interrupt Enable
+        pinMode(1, OUTPUT);
 }
 
 void pwm_on()
 {
-        analogWrite(lenable, dc);
+        analogWrite12(dc);;
         digitalWrite(led, HIGH);
 }
 
 void pwm_off()
 {
-        analogWrite(lenable, 0);
+        analogWrite12(0);
         digitalWrite(led, LOW);
 }
 
