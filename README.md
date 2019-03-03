@@ -8,7 +8,7 @@ Es wurde ein X/Y-Tisch mit 15W Dioden-Laser in ein Gehäuse eingebaut - angetrie
 
   [48219cbc]: http://lasergrbl.com/de/ "Laser-GBRL"
   <br>
-  Projektdokumentationen sind im [Doku-Ordner](https://github.com/makerspacewi/Laser-Cutter-Engraver/tree/master/doc) gesammelt.
+  Projektdokumentationen sind im [Doku-Ordner](https://github.com/makerspacewi/Laser-Cutter-Engraver/tree/master/doc) gesammelt, bzw. im [Wiki](https://github.com/makerspace-wi/Laser-Cutter-Engraver/wiki) zu finden.
 ### Safety- und Marker Modul
 Ziel ist ein einfaches Modul zu entwickeln, dass zum einen die Sicherheitsaspekte der Mitglieder sicher stellt und zum anderen einen Modus erlaubt, bei geöffnetem Arbeitsraum den Dioden-Laser mit sehr geringer Leistung (0,1 mW) zu aktivieren, um Werkstück und Laser auszurichten.
 <br><br>
