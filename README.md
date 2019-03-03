@@ -16,7 +16,7 @@ Ziel ist ein einfaches Modul zu entwickeln, dass zum einen die Sicherheitsaspekt
 Der Deckelschalter bestromt bei geschlossenem Deckel das Kleinsignalrelais und nur wenn das 12V Netzteil eingeschaltet, der Deckelschalter geschlossen und alle Kabel angeschlossen sind, kann das 'LASER ON' Signal vom Controller an die Lasereinheit weitergeleitet werden.<br>Wird der Deckel geöffnet, fällt das Relais ab und das 'LASER ON' Signal vom Controller an die Lasereinheit ist unterbrochen. Die Lasereinheit ist jetzt mit dem Controller auf dem Modul verbunden. Durch Betätigen des Tasters wird der Laser auf der kleinstmöglichen Leistungsstufe ein- und ausgeschaltet - er erzeugt ein Leuchtpunkt auf dem Werkstück, damit dieses entsprechend ausgerichtet werden kann.<br>
 Eine kleine rote Leuchtdiode zeigt diese Funktion an.
 #### Schaltbild:
-<img src='/doc/Safety & Marker Circuit/Schematic_01.png' width='100%'>
+<img src='doc/Safety & Marker Circuit/Screenshot 2019-03-03 13.00.21.png' width='100%'>
 
 #### Beschaltung:
 <img src='/images/2019/02/beschaltung-modul.jpg' width='100%'>
