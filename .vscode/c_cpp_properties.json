@@ -10,6 +10,7 @@
             "includePath": [
                 "c:/Users/Dieter Haude/OneDrive/Documents/PlatformIO/Projects/Laser_Engraver_Control/Laser-Cutter-Engraver/include",
                 "c:/Users/Dieter Haude/OneDrive/Documents/PlatformIO/Projects/Laser_Engraver_Control/Laser-Cutter-Engraver/src",
+                "c:/Users/Dieter Haude/OneDrive/Documents/PlatformIO/Projects/Laser_Engraver_Control/Laser-Cutter-Engraver/.pio/libdeps/attiny85/TaskScheduler/src",
                 "C:/Users/Dieter Haude/.platformio/packages/framework-arduino-avr-attiny/cores/tiny",
                 "C:/Users/Dieter Haude/.platformio/packages/framework-arduino-avr-attiny/variants/tinyX5",
                 "C:/Users/Dieter Haude/.platformio/packages/framework-arduino-avr-attiny/libraries/ATTinyCore/src",
@@ -28,6 +29,7 @@
                 "path": [
                     "c:/Users/Dieter Haude/OneDrive/Documents/PlatformIO/Projects/Laser_Engraver_Control/Laser-Cutter-Engraver/include",
                     "c:/Users/Dieter Haude/OneDrive/Documents/PlatformIO/Projects/Laser_Engraver_Control/Laser-Cutter-Engraver/src",
+                    "c:/Users/Dieter Haude/OneDrive/Documents/PlatformIO/Projects/Laser_Engraver_Control/Laser-Cutter-Engraver/.pio/libdeps/attiny85/TaskScheduler/src",
                     "C:/Users/Dieter Haude/.platformio/packages/framework-arduino-avr-attiny/cores/tiny",
                     "C:/Users/Dieter Haude/.platformio/packages/framework-arduino-avr-attiny/variants/tinyX5",
                     "C:/Users/Dieter Haude/.platformio/packages/framework-arduino-avr-attiny/libraries/ATTinyCore/src",
