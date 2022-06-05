@@ -1,3 +1,15 @@
+/*
+========> Fan Control <========
+Laser Enable Signal (PWM) is connected to PB3
+PB3 is polled every 100ms (task 1)
+If PB3 is high
+    - stop polling and activate delayed task 2 for 5 minutes
+    - turn on PB0 to activate TMOS-Transistor
+ Task 2
+  - turn PB0 LOW -  Gate Tmos Transistor
+  - activate Task 1
+*/
+
 #include <Arduino.h>
 #include <TaskScheduler.h>
 
