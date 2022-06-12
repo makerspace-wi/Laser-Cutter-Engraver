@@ -6,11 +6,11 @@
 #define taster1 4
 
 #define dc 1  // shortest duty cycle (1% equ. 2.55)
-#define minutes 1
-#define seconds 15
+#define minutes 2
+#define seconds 30
 
-const unsigned long DUR1 = 1000UL*seconds;
-const unsigned long DUR2 = 1000UL*60*minutes;
+const unsigned long DUR1 = 540UL*seconds;
+const unsigned long DUR2 = 540UL*60*minutes;
 
 volatile int Dac = 0;
 volatile int Cycle = 0;
@@ -83,10 +83,10 @@ void tmos_off() {
 }
 
 void loop() {
-  if (millis() > (DUR1 + myTimer1) && timer1_enable) {
+  if (millis() > (DUR2 + myTimer1) && timer1_enable) {
     pwm_off();
   }
-  if (millis() > (DUR2 + myTimer2) && timer2_enable) {
+  if (millis() > (DUR1 + myTimer2) && timer2_enable) {
     tmos_off();
   }
   if (digitalRead(led) == LOW && digitalRead(taster1) == LOW) {
