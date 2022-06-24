@@ -1,6 +1,6 @@
 # Laser-Cutter-Engraver
 Docu-Links:
-[Doku-Ordner](https://github.com/makerspacewi/Laser-Cutter-Engraver/tree/master/doc/Laserengraver.pdf)
+[Aktuelle Dokumentation](https://github.com/makerspacewi/Laser-Cutter-Engraver/tree/master/doc/Laserengraver.pdf)
 Mid Size Laser Cutter &amp; Engraver with [20W Diode Laser](https://nejetool.com/module_20w.html)
 <br><br>
 Bei diesem Gerät handelt es sich um ein DIY-Gerät, begonnen von unserem Mitglied Paul K.<br>
