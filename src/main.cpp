@@ -7,7 +7,7 @@
 
 #define dc 1  // shortest duty cycle (1% equ. 2.55)
 #define minutes 2
-#define seconds 30
+#define seconds 60
 
 const unsigned long DUR1 = 540UL*seconds;
 const unsigned long DUR2 = 540UL*60*minutes;
@@ -34,6 +34,11 @@ ISR(TIMER1_OVF_vect) {
   Cycle = (Cycle + 1) & 0x0F;
 }
 
+void pin2Interrupt(void)
+{
+  //is called for every PWM-Signal change
+}
+
 void analogWrite12(int value) {
   cli();
   Dac = value;
@@ -56,6 +61,9 @@ void setup() {
           | 1 << CS10;  // PWM clock = CK
   TIMSK |= 1 << TOIE1; // Timer/Counter1 Overflow Interrupt Enable
   pinMode(1, OUTPUT);
+
+ //attachInterrupt(digitalPinToInterrupt(IR_RECEIVE_PIN), pin2Interrupt, RAISING);
+
 }
 
 void pwm_on() {
@@ -92,7 +100,7 @@ void loop() {
   if (digitalRead(led) == LOW && digitalRead(taster1) == LOW) {
     pwm_on(); 
   }
-  if (digitalRead(pwm_signal) == HIGH && digitalRead(tmosgate) == LOW){
+  if (digitalRead(pwm_signal) == HIGH){
     tmos_on();
   }
 }
