@@ -9,8 +9,8 @@
 #define minutes 2
 #define seconds 60
 
-const unsigned long DUR1 = 540UL*seconds;
-const unsigned long DUR2 = 540UL*60*minutes;
+const unsigned long DUR1 = 130UL*seconds;
+const unsigned long DUR2 = 130UL*60*minutes;
 
 volatile int Dac = 0;
 volatile int Cycle = 0;
@@ -34,11 +34,6 @@ ISR(TIMER1_OVF_vect) {
   Cycle = (Cycle + 1) & 0x0F;
 }
 
-void pin2Interrupt(void)
-{
-  //is called for every PWM-Signal change
-}
-
 void analogWrite12(int value) {
   cli();
   Dac = value;
@@ -53,6 +48,8 @@ void setup() {
   pinMode(led, OUTPUT);
   digitalWrite(led, LOW);
 
+  delay(400);
+
   // Top value for high (Table 12-2)
   OCR1C = 255;
   // Timer/Counter1 doing PWM on OC1A (PB1)
@@ -61,9 +58,6 @@ void setup() {
           | 1 << CS10;  // PWM clock = CK
   TIMSK |= 1 << TOIE1; // Timer/Counter1 Overflow Interrupt Enable
   pinMode(1, OUTPUT);
-
- //attachInterrupt(digitalPinToInterrupt(IR_RECEIVE_PIN), pin2Interrupt, RAISING);
-
 }
 
 void pwm_on() {
