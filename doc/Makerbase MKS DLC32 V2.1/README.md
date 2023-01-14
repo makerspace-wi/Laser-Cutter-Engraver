@@ -1,13 +1,11 @@
+# Support Links for the MKS-DLC32
 
-
-https://de.aliexpress.com/item/1005003183498253.html?spm=a2g0o.store_pc_home.productList_8356958.pic_0&gatewayAdapt=glo2deu
+[AliExpress](https://de.aliexpress.com/item/1005003183498253.html?spm=a2g0o.store_pc_home.productList_8356958.pic_0&gatewayAdapt=glo2deu)
 
 [Firmware](https://github.com/makerbase-mks/MKS-DLC32-FIRMWARE)
 
 [Wiki](https://github.com/makerbase-mks/MKS-DLC32/wiki)
 
-https://www.youtube.com/watch?v=MKRBYVbxJmw
+[Instructions in using the MKS-DLC32](https://www.youtube.com/watch?v=MKRBYVbxJmw)
 
-https://www.youtube.com/watch?v=XJatWvxkfGs
-
-[ABC](http://makerspace-wi.de)
+[Setting up Wifi](https://www.youtube.com/watch?v=XJatWvxkfGs)
