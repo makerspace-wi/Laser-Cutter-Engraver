@@ -142,7 +142,7 @@ user_outputs:
   digital3_pin: NO_PIN
 
 start:
-  must_home: true
+  must_home: false
   deactivate_parking: false
   check_limits: false
   
