@@ -7,7 +7,7 @@ Bei diesem Gerät handelt es sich um ein DIY-Gerät, begonnen von unserem Mitgli
 <br><br>
 Dieser Laser-Engraver wurde vom Makerspace Technik-Team 2022/2023 grundlegend modifiziert.
 Die Maschine wurde teilweise neu verkabelt, erhielt neue Energieketten, einen Air-Assist Anschluss und kleinere mechanische Änderungen.  
-Es handelt sich dabei um einen X/Y-Tisch mit 36W Dioden-Laser (optisch 5,5W Dauer & 7,5W Puls) in ein Gehäuse eingebaut - gesteuert durch ein Makerbase MKS32 v2.1 Board (32Bit) und ein brandneues 32Bit Betriebssystem [FluidNC](https://github.com/bdring/FluidNC). Der große Vorteil hierbei ist, dass sämtlich Parameter in einer quasi Text-File (config.yaml) eingetragen und bei Bedarf sehr einfach geändert werden können.<br>
+Es handelt sich dabei um einen X/Y-Tisch mit 36W Dioden-Laser (optisch 5,5W Dauer & 7,5W Puls) in ein Gehäuse eingebaut - gesteuert durch ein [Makerbase MKS32 v2.1 Board](https://github.com/makerbase-mks/MKS-DLC32) (32Bit) und ein brandneues 32Bit Betriebssystem [FluidNC](https://github.com/bdring/FluidNC). Der große Vorteil hierbei ist, dass sämtlich Parameter in einer quasi Text-File (config.yaml) eingetragen und bei Bedarf sehr einfach geändert werden können.<br>
 So wird die X-Achse mit einem Motor und die Y-Achse mit 2 Motoren angetrieben und endlich kann die Maschine auch 'Homen'. 
 <br><br>
 Es gibt noch 2 weitere Module: Das Safety-, Marker und Blower Modul und ein 4 Kanal Opto-Koppler Modul
