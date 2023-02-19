@@ -9,12 +9,8 @@ Dieser Laser-Engraver wurde vom Makerspace Technik-Team 2022/2023 grundlegend mo
 Die Maschine wurde teilweise neu verkabelt, erhielt neue Energieketten, einen Air-Assist Anschluss und kleinere mechanische Änderungen.  
 Es handelt sich dabei um einen X/Y-Tisch mit 20W Dioden-Laser in ein Gehäuse eingebaut - gesteuert durch ein Makerbase MKS32 v2.1 Board (32Bit) und ein brandneues 32Bit Betriebssystem FluidNC. Der große Vorteil hierbei ist, dass sämtlich Parameter in einer quasi Text-File (config.yaml) eingetragen und bei Bedarf sehr einfach geändert werden können.
 <br><br>
-
-
-  [48219cbc]: http://lasergrbl.com/de/ "Laser-GBRL"
-  <br>
-  Projektdokumentationen sind im [Doku-Ordner](https://github.com/makerspacewi/Laser-Cutter-Engraver/tree/master/doc) gesammelt, bzw. im [Wiki](https://github.com/makerspace-wi/Laser-Cutter-Engraver/wiki) zu finden.
-### Safety- und Marker Modul
+Projektdokumentationen sind im [Doku-Ordner](https://github.com/makerspacewi/Laser-Cutter-Engraver/tree/master/doc) gesammelt, bzw. im [Wiki](https://github.com/makerspace-wi/Laser-Cutter-Engraver/wiki) zu finden.
+### Safety-, Marker und Blower Modul
 Ziel ist ein einfaches Modul zu entwickeln, dass zum einen die Sicherheitsaspekte der Mitglieder sicher stellt und zum anderen einen Modus erlaubt, bei geöffnetem Arbeitsraum den Dioden-Laser mit sehr geringer Leistung (0,1 mW) zu aktivieren, um Werkstück und Laser auszurichten.
 <br><br>
 #### Funktionsbeschreibung:
