@@ -4,9 +4,12 @@ Docu-Links:
 Mid Size Laser Cutter &amp; Engraver with [20W Diode Laser](https://nejetool.com/module_20w.html)
 <br><br>
 Bei diesem Gerät handelt es sich um ein DIY-Gerät, begonnen von unserem Mitglied Paul K.<br>
-Neben unserem 100W CO2-Laser für die gängigsten Aufgaben und unserem 150W DIY Laser Cutter mit großer Bearbeitungsfläche (noch im Aufbau) handelt es sich bei diesem Gerät um einen Experimental Gerät an dem interessierte Mitglieder forschen und Verbesserungen vornehmen.
 <br><br>
-Es wurde ein X/Y-Tisch mit 20W Dioden-Laser in ein Gehäuse eingebaut - angetrieben durch einen Arduino Uno mit CNC-Shield via [LASER-GBRL][48219cbc].
+Dieser Laser-Engraver wurde vom Makerspace Technik-Team 2022/2023 grundlegend modifiziert.
+Die Maschine wurde teilweise neu verkabelt, erhielt neue Energieketten, einen Air-Assist Anschluss und kleinere mechanische Änderungen.  
+Es handelt sich dabei um einen X/Y-Tisch mit 20W Dioden-Laser in ein Gehäuse eingebaut - gesteuert durch ein Makerbase MKS32 v2.1 Board (32Bit) und ein brandneues 32Bit Betriebssystem FluidNC. Der große Vorteil hierbei ist, dass sämtlich Parameter in einer quasi Text-File (config.yaml) eingetragen und bei Bedarf sehr einfach geändert werden können.
+<br><br>
+
 
   [48219cbc]: http://lasergrbl.com/de/ "Laser-GBRL"
   <br>
