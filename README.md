@@ -3,7 +3,7 @@ Docu-Links:
 [Aktuelle Dokumentation](https://github.com/makerspacewi/Laser-Cutter-Engraver/tree/master/doc/Laserengraver.pdf)<br>
 Mid Size Laser Cutter &amp; Engraver with [20W Diode Laser](https://nejetool.com/module_20w.html)
 <br><br>
-Bei diesem Gerät handelt es sich um ein DIY-Gerät, begonnen von unserem Mitglied Paul K.<br>
+Bei diesem Gerät handelt es sich um ein DIY-Gerät, begonnen von unserem Mitglied Paul K.
 <br><br>
 Dieser Laser-Engraver wurde vom Makerspace Technik-Team 2022/2023 grundlegend modifiziert.
 Die Maschine wurde teilweise neu verkabelt, erhielt neue Energieketten, einen Air-Assist Anschluss und kleinere mechanische Änderungen.  
