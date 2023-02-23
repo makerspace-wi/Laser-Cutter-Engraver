@@ -5,6 +5,8 @@ Mid Size Laser Cutter &amp; Engraver with [NEJE E30130 Diode Laser](https://neje
 <br><br>
 Bei diesem Gerät handelt es sich um ein DIY-Gerät, begonnen von unserem Mitglied Paul K.
 <br><br>
+Arbeitsfläche: 780mm x 780mm
+<br><br>
 Dieser Laser-Engraver wurde vom Makerspace Technik-Team 2022/2023 grundlegend modifiziert.
 Die Maschine wurde teilweise neu verkabelt, erhielt neue Energieketten, einen Air-Assist Anschluss und kleinere mechanische Änderungen.  
 Es handelt sich dabei um einen X/Y-Tisch mit 36W Dioden-Laser (optisch 5.5W, Dauer & 7.5W Puls) in ein Gehäuse eingebaut - gesteuert durch ein [Makerbase MKS32 v2.1 Board](https://github.com/makerbase-mks/MKS-DLC32) (32Bit) und ein brandneues 32Bit Betriebssystem [FluidNC](https://github.com/bdring/FluidNC). Der große Vorteil hierbei ist, dass sämtlich Parameter in einer quasi Text-File (config.yaml) eingetragen und bei Bedarf sehr einfach geändert werden können.<br>
