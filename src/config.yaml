@@ -1,6 +1,6 @@
 board: MKS-DLC32 V2.1
 name: Laser Engraver XYY
-meta: (19.02.2023 - 16:57) by Dieter
+meta: (21.02.2023 - 16:57) by Dieter
 
 kinematics:
   Cartesian:
@@ -17,7 +17,7 @@ axes:
     steps_per_mm: 80.270
     max_rate_mm_per_min: 8000.000
     acceleration_mm_per_sec2: 100.000
-    max_travel_mm: 790.000
+    max_travel_mm: 780.000
     soft_limits: true
     homing:
       cycle: 1
@@ -41,7 +41,7 @@ axes:
     steps_per_mm: 160.055
     max_rate_mm_per_min: 8000.000
     acceleration_mm_per_sec2: 100.000
-    max_travel_mm: 790.000
+    max_travel_mm: 780.000
     soft_limits: true
     homing:
       cycle: 1
