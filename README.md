@@ -1,4 +1,5 @@
 # Laser-Cutter-Engraver
+<img witdh="400" src="https://github.com/makerspace-wi/Laser-Cutter-Engraver/blob/master/doc/pictures/IMG_1268%204.jpg">
 Docu-Links:
 [Aktuelle Dokumentation](https://github.com/makerspacewi/Laser-Cutter-Engraver/tree/master/doc/Laserengraver.pdf)<br>
 Mid Size Laser Cutter &amp; Engraver with [NEJE E30130 Diode Laser](https://nejetool.com/index.php/2022/12/21/neje-e30130-laser-module-description-details/)
