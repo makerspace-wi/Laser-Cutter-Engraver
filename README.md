@@ -3,7 +3,7 @@
 
 Mid Size Laser Cutter &amp; Engraver with [NEJE E30130 Diode Laser](https://nejetool.com/index.php/2022/12/21/neje-e30130-laser-module-description-details/) - die Arbeitsfläche ist 780mm x 780mm
 <br><br>
-Bei diesem Gerät handelt es sich um ein DIY-Gerät, begonnen von unserem Mitglied Paul K.
+Bei diesem Gerät handelt es sich um ein DIY-Gerät, dass ursprünglich nur als Testmaschine gedacht war.
 <br><br>
 Dieser Laser-Engraver wurde vom Makerspace Technik-Team 2022/2023 grundlegend modifiziert.
 Die Maschine wurde teilweise neu verkabelt, erhielt neue Energieketten, einen Air-Assist Anschluss und kleinere mechanische Änderungen.  
