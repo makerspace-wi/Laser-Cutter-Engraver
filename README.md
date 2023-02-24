@@ -22,9 +22,5 @@ Dieses Modul stellt zum einen die Sicherheitsaspekte der Mitglieder sicher - d.h
 
 <br><br>
 Projektdokumentationen sind im [Doku-Ordner](https://github.com/makerspacewi/Laser-Cutter-Engraver/tree/master/doc) gesammelt, bzw. im [Wiki](https://github.com/makerspace-wi/Laser-Cutter-Engraver/wiki) zu finden.
-#### Schaltbild:
-
-
-#### Beschaltung:
 
 # [Zum Laser Engraver Wiki](https://github.com/makerspace-wi/Laser-Cutter-Engraver/wiki)
