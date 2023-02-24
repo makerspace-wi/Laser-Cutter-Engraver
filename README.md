@@ -29,3 +29,4 @@ Projektdokumentationen sind im [Doku-Ordner](https://github.com/makerspacewi/Las
 
 #### Beschaltung:
 
+# [Zum Laser Engraver Wiki](https://github.com/makerspace-wi/Laser-Cutter-Engraver/wiki)
