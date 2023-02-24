@@ -15,7 +15,7 @@ Bedient/gesteuert wird der Laser Engraver von einem Windows PC und dem Programm 
 Es gibt dazu weitere Module: Das Safety-, Marker und Blower Modul und ein 4 Kanal Opto-Koppler Modul
 
 ### Safety-, Marker und Blower Modul
-Dieses Modul stellt zum einen die Sicherheitsaspekte der Mitglieder sicher - d.h. der Laser kann vom Controller nur dann angesteuert werden, wenn der Deckel geschlossen ist, zum anderen einen Modus, bei geöffnetem Arbeitsraum den Dioden-Laser mit sehr geringer Leistung (0,1 mW) zu aktivieren, um Werkstück/Laser auszurichten und es übernimmt auch das Einschalten der Lüfter wenn der Laserkopf in Betrieb ist.
+Dieses Modul stellt zum einen die Sicherheitsaspekte der Mitglieder sicher - d.h. der Laser kann vom Controller nur dann angesteuert werden, wenn der Deckel geschlossen ist, zum anderen einen Modus, bei geöffnetem Arbeitsraum den Dioden-Laser mit sehr geringer Leistung (0,1 mW) zu aktivieren, um Werkstück/Laser auszurichten und es übernimmt auch das Einschalten der Lüfter wenn der Laserkopf in Betrieb geht.
 <br><br>
 ### 4-Kanal Optokoppler Modul
 Über diese Modul werden alle externen Signale (Endschalter und Low Power Laser ein) entkoppelt zu den Controller Eingängen geführt.
